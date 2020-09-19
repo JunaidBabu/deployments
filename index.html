@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="HyperLocal">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>HyperLocal</title>
+  <style type="text/css">
+    #loader {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #loader h1 {
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      line-height: normal;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      console.log("Loading completed!")
+  // run code
+};
+  </script>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div id="loader">
+    <h1>
+      Please wait... application is loading
+    </h1>
+  </div>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1672213646');
+      });
+    }
+  </script>
+  <script src="main.dart.js?v=1672213646" type="application/javascript"></script>
+</body>
+</html>
